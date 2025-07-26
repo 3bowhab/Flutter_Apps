@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/custom_app_bar.dart';
 import 'package:notes_app/views/widgets/custom_note_card.dart';
+import 'package:notes_app/views/widgets/floating_button.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -9,13 +10,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      floatingActionButton: FloatingActionButton(
-        shape: const CircleBorder(),
-        onPressed: () {
-          // Add your action here
-        },
-        child: const Icon(Icons.add),
-      ),
+      floatingActionButton: FloatingButton(),
       body: Padding(
         padding: const EdgeInsets.only(right: 18, left: 18, bottom: 30),
         child: ListView.builder(
@@ -26,3 +21,7 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
+
+
+

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants.dart';
 
 class CustomNoteCard extends StatelessWidget {
   const CustomNoteCard({super.key});
@@ -22,7 +23,7 @@ class CustomNoteCard extends StatelessWidget {
               children: [
                 Text(
                   "Flutter tips",
-                  style: TextStyle(color: Colors.black, fontSize: 25),
+                  style: TextStyle(color: Colors.black, fontSize: 25, fontFamily: mainFont),
                 ),
                 Spacer(),
                 Transform.translate(
@@ -45,6 +46,7 @@ class CustomNoteCard extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.black.withValues(alpha: .4),
                   fontSize: 18,
+                  fontFamily: mainFont
                 ),
               ),
             ),
@@ -54,7 +56,7 @@ class CustomNoteCard extends StatelessWidget {
                 Spacer(),
                 Text(
                   'May 21.2025',
-                  style: TextStyle(color: Colors.black.withValues(alpha: .4)),
+                  style: TextStyle(color: Colors.black.withValues(alpha: .4), fontFamily: mainFont),
                 ),
               ],
             ),

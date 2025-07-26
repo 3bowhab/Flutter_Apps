@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -11,7 +12,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Row(
         children: [
-          Text('Notes', style: TextStyle(fontSize: 25)),
+          Text('Notes', style: TextStyle(fontSize: 25, fontFamily: mainFont)),
           Spacer(),
           Container(
             height: 40,

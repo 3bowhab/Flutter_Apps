@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/views/widgets/new_note.dart';
+import 'package:notes_app/constants.dart';
+import 'package:notes_app/views/widgets/buttom_sheet.dart';
 
 class FloatingButton extends StatelessWidget {
   const FloatingButton({super.key});
@@ -8,15 +9,16 @@ class FloatingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       shape: const CircleBorder(),
+      backgroundColor: mainColor,
       onPressed: () {
         showModalBottomSheet(
           context: context,
           builder: (context) {
-            return NewNote();
+            return ButtomSheet();
           },
         );
       },
-      child: const Icon(Icons.add),
+      child: const Icon(Icons.add, color: Colors.black,),
     );
   }
 }

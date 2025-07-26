@@ -11,15 +11,18 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       cursorColor: mainColor,
       maxLines: maxLines,
+      style: feildTextStyle(),
       decoration: InputDecoration(
         hintText: text,
-        hintStyle: TextStyle(color: mainColor, fontFamily: mainFont),
+        hintStyle: feildTextStyle(mainColor),
         border: feildBorder(),
         enabledBorder: feildBorder(),
         focusedBorder: feildBorder(mainColor),
       ),
     );
   }
+
+  TextStyle feildTextStyle([color]) => TextStyle(color: color ?? Colors.white, fontFamily: mainFont);
 
   OutlineInputBorder feildBorder([color]) {
     return OutlineInputBorder(

@@ -11,7 +11,9 @@ class ButtomSheet extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 30),
-          CustomTextField(),
+          CustomTextField(text: 'Title',),
+          SizedBox(height: 20),
+          CustomTextField(text: "content", maxLines: 5),
         ],
       ),
     );

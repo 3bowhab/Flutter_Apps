@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar({super.key, required this.text, required this.icon});
+  final String text;
+  final IconData icon;
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -12,7 +14,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Row(
         children: [
-          Text('Notes', style: TextStyle(fontSize: 25, fontFamily: mainFont)),
+          Text(text, style: TextStyle(fontSize: 25, fontFamily: mainFont)),
           Spacer(),
           Container(
             height: 40,
@@ -23,7 +25,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             child: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.search, size: 25),
+              icon: Icon(icon, size: 25),
             ),
           ),
         ],
